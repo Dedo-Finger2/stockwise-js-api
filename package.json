@@ -1,0 +1,37 @@
+{
+  "name": "stockwise-js-api",
+  "version": "1.0.0",
+  "description": "stockwise project",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:staged": "jest --testPathPattern src/**/tests/unit/*.unit.test.js --passWithNoTests",
+    "test:unit": "jest --testPathPattern src/**/tests/unit/*.unit.test.js",
+    "test:e2e": "jest --testPathPattern src/**/tests/e2e/*.e2e.test.js",
+    "test:integration": "jest --testPathPattern src/**/tests/integration/*.integration.test.js",
+    "start": "node --watch --env-file .env src/server.js",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "Antonio Mauricio",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "9.7.0",
+    "@swc/core": "1.7.0",
+    "@swc/jest": "0.2.36",
+    "@types/jest": "29.5.12",
+    "@types/node": "20.14.11",
+    "eslint": "9.7.0",
+    "globals": "15.8.0",
+    "husky": "9.1.1",
+    "jest": "29.7.0",
+    "lint-staged": "15.2.7",
+    "prettier": "3.3.3"
+  },
+  "dependencies": {
+    "fastify": "4.28.1",
+    "valibot": "0.36.0"
+  }
+}
