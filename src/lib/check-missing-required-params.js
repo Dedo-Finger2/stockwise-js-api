@@ -6,7 +6,7 @@ export function checkMissingRequiredParams(requiredParams, object) {
   const missingParams = [];
 
   for (const [key, value] of Object.entries(object)) {
-    if (!value) {
+    if (!value && requiredParams.includes(key)) {
       missingParams.push(key);
     }
   }
